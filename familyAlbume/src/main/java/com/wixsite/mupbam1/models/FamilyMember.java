@@ -1,5 +1,6 @@
 package com.wixsite.mupbam1.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,7 +20,10 @@ import lombok.ToString;
 public class FamilyMember {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id")
 	int id;
+	@Column(name="name")
 	String name;
+	@Column(name="img_url")
 	String imgUrl;
 }

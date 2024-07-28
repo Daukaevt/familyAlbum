@@ -6,6 +6,9 @@
 </head>
 <body>
 Hello, from my family!
+<div th:each="person: ${family}">
+	<a th:href="@{/family/{id}(id=${person.getId})}" th:text="${person.getName}"></a>
+</div>
 
 </body>
 </html>
